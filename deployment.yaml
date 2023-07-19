@@ -1,29 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld
+  name: hello-world-atp
   labels:
-    app.kubernetes.io/name: helloworld
-    app.kubernetes.io/instance: helloworld
+    app.kubernetes.io/name: hello-world-atp
+    app.kubernetes.io/instance: hello-world-atp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: helloworld
-      app.kubernetes.io/instance: helloworld
+      app.kubernetes.io/name: hello-world-atp
+      app.kubernetes.io/instance: hello-world-atp
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: helloworld
-        app.kubernetes.io/instance: helloworld
+        app.kubernetes.io/name: hello-world-atp
+        app.kubernetes.io/instance: hello-world-atp
     spec:
       containers:
-        - name: helloworld
-          image: asia.gcr.io/poc-innovation-iot/helloworld
+        - name: hello-world-atp
+          image: asia.gcr.io/poc-innovation-iot/hello-world-atp:latest
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 8888
               protocol: TCP
           livenessProbe:
             httpGet:
@@ -39,8 +39,8 @@ spec:
             initialDelaySeconds: 10
           resources: 
             limits: 
-              cpu: 500m
-              memory: 128Mi
+              cpu: 64m
+              memory: 32Mi
             requests: 
-              cpu: 250m
+              cpu: 32m
               memory: 6

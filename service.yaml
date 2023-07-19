@@ -1,17 +1,17 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: helloworld
+  name: hello-world-atp
   labels:
-    app.kubernetes.io/name: helloworld
-    app.kubernetes.io/instance: helloworld
+    app.kubernetes.io/name: hello-world-atp
+    app.kubernetes.io/instance: hello-world-atp
 spec:
   type: ClusterIP
   ports:
-    - port: 8080
+    - port: 8888
       targetPort: http
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: helloworld
-    app.kubernetes.io/instance: helloworld
+    app.kubernetes.io/name: hello-world-atp
+    app.kubernetes.io/instance: hello-world-atp
