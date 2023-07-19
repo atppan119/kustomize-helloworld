@@ -7,4 +7,4 @@ resources:
 namespace: atp-training
 images:
 - name: asia.gcr.io/poc-innovation-iot/hello-world-atp
-  newTag: f73fd978
+  newTag: 4cabae53
