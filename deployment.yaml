@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/name: hello-world-atp
     app.kubernetes.io/instance: hello-world-atp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app.kubernetes.io/name: hello-world-atp
